@@ -13,7 +13,9 @@
 body {
     font-family: Arial, sans-serif;
     color: var(--light);
-    background-color: var(--dark);
+    background: url("/Site WEB/images/imagefond2.jpg") no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
 }
 
 /* HEADER */
@@ -29,6 +31,10 @@ header {
     z-index: 10;
 }
 
+.logo {
+    font-weight: bold;
+}
+
 nav a {
     color: var(--light);
     text-decoration: none;
@@ -36,49 +42,89 @@ nav a {
     font-size: 1.1rem;
 }
 
+nav a:hover {
+    color: var(--primary);
+}
+
 /* HERO */
 .hero {
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url('https://img.goodfon.com/wallpaper/big/2/77/velosiped-sport-baik-bicycle-carbon-sport-shosseinyi-love-on.webp');
-    background-size: cover;
-    background-position: center;
     text-align: center;
     padding: 2rem;
 }
 
 .hero h1 {
-    font-size: 4rem;
-    text-transform: uppercase;
-    animation: slideDown 2.5s ease;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 6px black;
 }
 
-@keyframes slideDown {
-    from {
-        opacity: 0;
-        transform: translateY(-40px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.hero p {
+    font-size: 1.3rem;
+    max-width: 600px;
+    text-shadow: 1px 1px 4px black;
 }
 
 .btn {
-    margin-top: 2rem;
-    padding: 0.8rem 1.5rem;
-    background: var(--primary);
-    border-radius: 5px;
-    text-decoration: none;
-    color: var(--light);
-    font-size: 1.1rem;
     display: inline-block;
+    margin-top: 2rem;
+    padding: 0.9rem 1.8rem;
+    background: linear-gradient(90deg, #007bff, #00bfff);
+    border: none;
+    border-radius: 50px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.4s ease;
+    box-shadow: 0 0 0px rgba(0, 191, 255, 0.4);
 }
 
-/* Responsive */
+.btn:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 191, 255, 0.7);
+    background: linear-gradient(90deg, #00bfff, #007bff);
+}
+
+/* CONTENT */
+.content {
+    padding: 8rem 2rem 4rem;
+    max-width: 800px;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+}
+
+.content h1,
+h2 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.content p,
+ul {
+    line-height: 1.6;
+}
+
+/* IMAGE VÉLO AVEC EFFET ZOOM */
+.velo-img {
+    width: 100%;
+    margin-top: 1.5rem;
+    border-radius: 10px;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.velo-img:hover {
+    transform: scale(1.25);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* RESPONSIVE */
 @media (max-width: 768px) {
     .hero h1 {
         font-size: 2.2rem;
