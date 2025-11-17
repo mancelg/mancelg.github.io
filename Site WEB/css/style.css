@@ -1,15 +1,18 @@
 :root {
+    /* Couleurs principales*/
     --primary: #0b6efd;
     --dark: #0a0a0a;
     --light: #ffffff;
 }
 
+/*Normalisation des styles*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* body: image de fond*/
 body {
     font-family: Arial, sans-serif;
     color: var(--light);
@@ -18,7 +21,7 @@ body {
     min-height: 100vh;
 }
 
-
+/*Header: partie en haut*/
 header {
     display: flex;
     justify-content: space-between;
@@ -31,6 +34,7 @@ header {
     z-index: 10;
 }
 
+/*Footer: pied de page*/
 footer {
     background: rgba(0, 0, 0, 0.8);
     color: white;
@@ -72,11 +76,12 @@ footer {
     opacity: 0.8;
 }
 
-
+/* Logo dans le header*/
 .logo {
     font-weight: bold;
 }
 
+/*Liens de nav*/
 nav a {
     color: var(--light);
     text-decoration: none;
@@ -88,7 +93,7 @@ nav a:hover {
     color: var(--primary);
 }
 
-
+/*Hero: section d'accueil*/
 .hero {
     height: 100vh;
     display: flex;
@@ -111,6 +116,7 @@ nav a:hover {
     text-shadow: 1px 1px 4px black;
 }
 
+/*Bouton principal*/
 .btn {
     display: inline-block;
     margin-top: 2rem;
@@ -133,7 +139,7 @@ nav a:hover {
     background: linear-gradient(90deg, #00bfff, #007bff);
 }
 
-
+/*Mise en forme du contenu principal*/
 .content {
     padding: 8rem 2rem 4rem;
     max-width: 800px;
@@ -153,7 +159,7 @@ ul {
     line-height: 1.6;
 }
 
-
+/*Effet zoom pour les images*/
 .velo-img {
     width: 100%;
     margin-top: 1.5rem;
@@ -166,7 +172,7 @@ ul {
     box-shadow: 0 20px 25px rgba(0, 0, 0, 0.4);
 }
 
-
+/*Responsive pour mobile*/
 @media (max-width: 768px) {
     .hero h1 {
         font-size: 2.2rem;
