@@ -160,16 +160,53 @@ ul {
 }
 
 /*Effet zoom pour les images*/
-.velo-img {
-    width: 100%;
-    margin-top: 1.5rem;
+
+.image-container {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
     border-radius: 10px;
-    transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
-.velo-img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.4);
+.image-container img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease;
+    border-radius: 10px;
+    cursor: zoom-in;
+}
+
+.image-container:hover img {
+    transform: scale(1.15);
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 85vh;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    cursor: zoom-out;
+}
+
+.lightbox:target {
+    display: flex;
+}
+
+/* Zone cliquable pour fermer */
+.lightbox .close {
+    position: absolute;
+    inset: 0;
+    background: transparent;
 }
 
 /*Responsive pour mobile*/
