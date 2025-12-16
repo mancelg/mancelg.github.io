@@ -33,12 +33,6 @@ Le site est composé de trois pages principales :
 * **Accessibilité** : Respect des normes WCAG 2.0 AA (contrastes, balises alt, navigation clavier).
 * **IDE** : VS Code.
 
-### Gestion de Projet (R1.15)
-Le projet a suivi une méthodologie structurée :
-* **WBS (Work Breakdown Structure)** : Découpage du projet en tâches hiérarchiques.
-* **Planification** : Tableau de suivi temporel (Excel/Gantt) pour respecter les délais (20h de travail estimées).
-* **Suivi** : Utilisation de **Trello** pour la gestion des tâches (Kanban).
-
 ---
 
 ## Fonctionnalités clés
