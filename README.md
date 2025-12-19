@@ -30,8 +30,7 @@ Le site est composé de trois pages principales :
     * Mise en page via **Flexbox**.
     * Design **Responsive** (Mobile, Tablette, Desktop).
     * **Animations CSS** (transitions, effets de survol, lightbox sans JavaScript).
-* **Accessibilité** : Respect des normes WCAG 2.0 AA (contrastes, balises alt, navigation clavier).
-* **IDE** : VS Code.
+* **Accessibilité** : Respect des normes WCAG 2.0 AA (contrastes, balises alt, navigation clavier) et W3C.
 
 ---
 
@@ -58,4 +57,4 @@ Projet réalisé par **[Mancel Gabriel]**.
 *Étudiant en BUT Réseaux et Télécomunication*
 
 ---
-*Dernière mise à jour : [16/12/2025]*
+*Dernière mise à jour : [19/12/2025]*
