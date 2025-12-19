@@ -1,23 +1,24 @@
-/*couleurs principales */
+/* 1. VARIABLES & RESET*/
 :root {
-    --primary: #567baf;
+    --primary: #7093c4;
     --dark: #0a0a0a;
     --light: #ffffff;
+    --accent: #7093c4; 
 }
 
-/*Normalisation des styles*/
+/* Normalisation des styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/*html et body: hauteur est de 100% */
-html,body {
+/* Hauteur 100% pour html et body */
+html, body {
     height: 100%;
 }
 
-/*Flexbox pour forcer le footer en bas*/
+/* Body : Image de fond et Flexbox pour le footer */
 body {
     font-family: Arial, sans-serif;
     color: var(--light);
@@ -27,7 +28,7 @@ body {
     flex-direction: column;
 }
 
-/*Header : partie en haut*/
+/*HEADER et NAVIGATION*/
 header {
     display: flex;
     justify-content: space-between;
@@ -40,7 +41,22 @@ header {
     z-index: 10;
 }
 
-/*Contenu principal :occupe l'espace restant*/
+.logo {
+    font-weight: bold;
+}
+
+nav a {
+    color: var(--light);
+    text-decoration: none;
+    margin-left: 1rem;
+    font-size: 1.1rem;
+}
+
+nav a:hover {
+    color: var(--primary);
+}
+
+/*3. CONTENU GÉNÉRAL (MAIN) */
 .content {
     flex: 1;
     padding: 8rem 2rem 4rem;
@@ -61,7 +77,7 @@ ul {
     line-height: 1.6;
 }
 
-
+/* Liens spécifiques dans le texte */
 .content ul li a {
     color: var(--accent); 
     text-decoration: underline;
@@ -73,89 +89,9 @@ ul {
     text-decoration: none;
 }
 
-/*Footer : pied de page*/
-footer {
-    background: rgba(0, 0, 0, 0.8);
-    color: white;
-    padding: 2rem 1rem;
-    text-align: center;
-    margin-top: 3rem;
-}
+/* COMPOSANTS (BOUTONS & IMAGES) */
 
-.footer-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    max-width: 1000px;
-    margin: auto;
-    gap: 1.5rem;
-}
-
-.footer-section {
-    flex: 1 1 250px;
-}
-
-.footer-section h3 {
-    color: #00bfff;
-    margin-bottom: 0.8rem;
-}
-
-.footer-section a {
-    color: white;
-    text-decoration: none;
-}
-
-.footer-section a:hover {
-    color: #00bfff;
-}
-
-.footer-bottom {
-    margin-top: 2rem;
-    font-size: 0.9rem;
-    opacity: 0.8;
-}
-
-/*Logo dans le header*/
-.logo {
-    font-weight: bold;
-}
-
-/*Liens de nav*/
-nav a {
-    color: var(--light);
-    text-decoration: none;
-    margin-left: 1rem;
-    font-size: 1.1rem;
-}
-
-nav a:hover {
-    color: var(--primary);
-}
-
-/*Hero : section d'accueil*/
-.hero {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 2rem;
-}
-
-.hero h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    text-shadow: 2px 2px 6px black;
-}
-
-.hero p {
-    font-size: 1.3rem;
-    max-width: 600px;
-    text-shadow: 1px 1px 4px black;
-}
-
-/*bouton principal*/
+/* Bouton principal (dégradé bleu) */
 .btn {
     display: inline-block;
     margin-top: 2rem;
@@ -178,7 +114,7 @@ nav a:hover {
     background: linear-gradient(90deg, #00bfff, #007bff);
 }
 
-/*Effet zoom pour les images*/
+/* Images & Lightbox (Galerie) */
 .image-container {
     position: relative;
     overflow: hidden;
@@ -220,21 +156,42 @@ nav a:hover {
     display: flex;
 }
 
-/*Zone cliquable pour fermer*/
 .lightbox .close {
     position: absolute;
     inset: 0;
     background: transparent;
 }
 
+/* 5. PAGE ACCUEIL (HERO)*/
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+}
 
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 6px black;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    max-width: 600px;
+    text-shadow: 1px 1px 4px black;
+}
+
+/* PAGE À PROPOS*/
 .apropos-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
 }
-
 
 .profile-card {
     display: flex;
@@ -250,6 +207,7 @@ nav a:hover {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
+/* Photo de profil */
 .profile-image-wrapper {
     flex-shrink: 0; 
 }
@@ -269,7 +227,7 @@ nav a:hover {
     border-color: var(--accent);
 }
 
-
+/*Texte de présentation */
 .profile-text {
     text-align: left; 
 }
@@ -289,7 +247,7 @@ nav a:hover {
     letter-spacing: 1px;
 }
 
-
+/*Badges Compétences */
 .skills-preview h3 {
     margin-bottom: 1rem;
     color: #ccc;
@@ -314,25 +272,7 @@ nav a:hover {
     box-shadow: 0 2px 5px rgba(0,0,0,0.3);
 }
 
-
-@media (max-width: 768px) {
-    .profile-card {
-        flex-direction: column; 
-        text-align: center;
-        gap: 1.5rem;
-    }
-
-    .profile-text {
-        text-align: center; 
-    }
-
-    .profile-pic {
-        width: 150px; 
-        height: 150px;
-    }
-}
-
-/*Bouton Strava*/
+/*Section Strava */
 .strava-box {
     margin-top: 1.5rem;
     padding-top: 1rem;
@@ -373,14 +313,73 @@ nav a:hover {
     filter: brightness(0) invert(1); 
 }
 
+/*FOOTER*/
+footer {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+    margin-top: 3rem;
+}
 
-/*Responsive pour mobile*/
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: auto;
+    gap: 1.5rem;
+}
+
+.footer-section {
+    flex: 1 1 250px;
+}
+
+.footer-section h3 {
+    color: #00bfff;
+    margin-bottom: 0.8rem;
+}
+
+.footer-section a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    color: #00bfff;
+}
+
+.footer-bottom {
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+
+/* RESPONSIVE (MOBILE)*/
 @media (max-width: 768px) {
+    /* Accueil */
     .hero h1 {
         font-size: 2.2rem;
     }
 
     nav a {
         font-size: 1rem;
+    }
+
+    /* Page À propos */
+    .profile-card {
+        flex-direction: column; 
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    .profile-text {
+        text-align: center; 
+    }
+
+    .profile-pic {
+        width: 150px; 
+        height: 150px;
     }
 }
